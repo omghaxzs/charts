@@ -1,0 +1,17 @@
+{{- if .Values.persistence.enabled -}}
+{{- $fullName := include "generic-service.fullname" . -}}
+{{- range $volumeName, $val := .Values.persistence.volumes }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ $fullName }}-{{ $volumeName }}
+spec:
+  storageClassName: {{ $val.storageClass }}
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ $val.storage }}
+{{- end }}
+{{- end }}
