@@ -51,6 +51,7 @@ ports:
   protocol: TCP
 
 service:
+  enabled: true
   type: ClusterIP
   ports:
   - name:  http
