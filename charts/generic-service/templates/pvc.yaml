@@ -8,8 +8,12 @@ metadata:
   name: {{ $fullName }}-{{ $volumeName }}
 spec:
   storageClassName: {{ $val.storageClass }}
+  {{- if $val.accessModes }}
   accessModes:
+  {{- toYaml $val.accessModes | nindent 2 }}
+  {{- else }}
     - ReadWriteOnce
+  {{- end }}
   resources:
     requests:
       storage: {{ $val.storage }}
