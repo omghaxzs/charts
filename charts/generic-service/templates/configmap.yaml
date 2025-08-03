@@ -5,6 +5,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ $fullName }}-{{ $configName }}
-spec:
-    {{- toYaml $val | nindent 2}}
+data:
+  {{ $configName }}: |
+{{- toYaml $val | nindent 4}}
 {{- end }}
