@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   generic-service:
   - apiVersion: v2
+    appVersion: 1.18.0
+    created: "2025-08-03T21:55:49.417423685Z"
+    description: A Helm chart for Kubernetes
+    digest: 76b11a636611af0f24a39aa7221dc373bb81d2dabc2a887ff26886f5303d9382
+    name: generic-service
+    type: application
+    urls:
+    - https://github.com/omghaxzs/charts/releases/download/generic-service-0.1.8/generic-service-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
     appVersion: 1.17.0
     created: "2025-08-03T18:18:40.531732997Z"
     description: A Helm chart for Kubernetes
@@ -81,4 +91,4 @@ entries:
     urls:
     - https://github.com/omghaxzs/generic-service/releases/download/generic-service-0.1.0/generic-service-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-03T18:18:40.531776508Z"
+generated: "2025-08-03T21:55:49.417465516Z"
