@@ -6,6 +6,5 @@ kind: ConfigMap
 metadata:
   name: {{ $fullName }}-{{ $configName }}
 data:
-  {{ $configName }}: |
-{{- toYaml $val | nindent 4}}
+  {{- toYaml $val | nindent 2}}
 {{- end }}
