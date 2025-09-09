@@ -98,9 +98,9 @@ persistence:
 env: []
 
 
-volumes: {}
+volumes: []
 
-volumeMounts: {}
+volumeMounts: []
   #- name: Name of the Volume
   #  mountPath:  Path to mount
 
