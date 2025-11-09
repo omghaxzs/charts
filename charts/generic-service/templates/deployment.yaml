@@ -29,6 +29,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       serviceAccountName: {{ include "generic-service.serviceAccountName" . }}
+      hostNetwork: {{ .Values.hostNetwork | default false }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       initContainers:
