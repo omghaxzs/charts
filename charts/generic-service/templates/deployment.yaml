@@ -38,10 +38,10 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           {{- with .Values.command }}
-          command: {{ . }}
+          command: {{- toYaml . }}
           {{- end }}
           {{- with .Values.args }}
-          args: {{ . }}
+          args: {{- toYaml . }}
           {{- end }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
