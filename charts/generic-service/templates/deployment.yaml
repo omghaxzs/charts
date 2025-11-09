@@ -37,12 +37,8 @@ spec:
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
-          {{- with .Values.command }}
-          command: {{- toYaml . }}
-          {{- end }}
-          {{- with .Values.args }}
-          args: {{- toYaml . }}
-          {{- end }}
+          command: {{ .Values.command }}
+          args: {{ .Values.args }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
