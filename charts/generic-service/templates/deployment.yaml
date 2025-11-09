@@ -39,8 +39,10 @@ spec:
         - name: {{ .Chart.Name }}
           {{- with .Values.command }}
           command: {{ . }}
+          {{- end }}
           {{- with .Values.args }}
           args: {{ . }}
+          {{- end }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
