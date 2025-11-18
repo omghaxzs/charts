@@ -89,11 +89,7 @@ resources: {}
 
 persistence:
   enabled: false
-  volumes:
-    # the key is the name of the volume
-    data:
-      storage: 1Gi
-      storageClass: longhorn
+  volumes: []
 
 env: []
 
