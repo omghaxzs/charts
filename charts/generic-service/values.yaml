@@ -116,3 +116,5 @@ tolerations: []
 affinity: {}
 
 config: {}
+
+secrets: {}
